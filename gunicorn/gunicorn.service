@@ -7,7 +7,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/test-deploy
-ExecStart=/bin/bash -c 'PYTHONPATH=/home/ubuntu/test-deploy /home/ubuntu/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock conf.wsgi:application'
+ExecStart=/home/ubuntu/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock conf.wsgi:application
 
 
 [Install]
