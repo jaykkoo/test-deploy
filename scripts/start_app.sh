@@ -2,6 +2,8 @@
 
 sed -i 's/\[]/\["54.164.227.130"]/' /home/ubuntu/test-deploy/conf/settings.py
 
+cd /home/ubuntu/test-deploy
+
 python manage.py migrate 
 python manage.py makemigrations     
 python manage.py collectstatic
