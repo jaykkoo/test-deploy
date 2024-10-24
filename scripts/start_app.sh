@@ -1,6 +1,7 @@
 sed -i 's/\[]/\["54.164.227.130"]/' /home/ubuntu/test-deploy/conf/settings.py
 
 sudo mkdir -p /home/ubuntu/test-deploy/staticfiles
+sudo mkdir -p /home/ubuntu/test-deploy/static
 
 # Navigate to the project directory
 cd /home/ubuntu/test-deploy || exit
