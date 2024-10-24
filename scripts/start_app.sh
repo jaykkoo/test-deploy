@@ -15,6 +15,6 @@ python manage.py migrate
 python manage.py makemigrations
 python manage.py collectstatic --noinput
 
-# Restart Gunicorn and Nginx services
+# Restart Gunicorn and Nginx servicesq
 sudo service gunicorn restart
 sudo service nginx restart
