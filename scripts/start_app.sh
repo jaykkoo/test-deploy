@@ -15,6 +15,6 @@ sudo chmod -R 755 /home/ubuntu/test-deploy/staticfiles
 /home/ubuntu/venv/bin/python manage.py makemigrations
 /home/ubuntu/venv/bin/python manage.py collectstatic --noinput
 
-# Restart Gunicorn and Nginx servicesq
+# Restart Gunicorn and Nginx services
 sudo service gunicorn restart
 sudo service nginx restart
