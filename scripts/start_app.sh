@@ -10,9 +10,9 @@ sudo chown -R ubuntu:www-data /home/ubuntu/test-deploy/staticfiles
 sudo chmod -R 755 /home/ubuntu/test-deploy/staticfiles
 
 # Run Django management commands
-/home/ubuntu/venv/bin/python manage.py migrate
-/home/ubuntu/venv/bin/python manage.py makemigrations
-/home/ubuntu/venv/bin/python manage.py collectstatic --noinput
+python manage.py migrate
+python manage.py makemigrations
+python manage.py collectstatic --noinput
 
 # Restart Gunicorn and Nginx services
 sudo service gunicorn restart
