@@ -1,0 +1,34 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/test-deploy
+hooks:
+  BeforeInstall:
+      - location: scripts/before_install.sh
+        timeout: 300
+        runas: ubuntu
+  AfterInstall:
+      # - location: scripts/after_install.sh
+      #   timeout: 300
+      #   runas: ubuntu
+      - location: scripts/instance_os_dependencies.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/python_dependencies.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/gunicorn.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/nginx.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStop:
+      - location: scripts/stop_app.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStart:
+      - location: scripts/start_app.sh
+        timeout: 300
+        runas: ubuntu
