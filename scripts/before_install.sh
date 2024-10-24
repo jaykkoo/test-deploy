@@ -14,4 +14,4 @@ sudo chmod +x ./install
 sudo ./install auto
 
 # delete app 2
-sudo rm -rf /home/ubuntu/test-deploy/*
+# sudo rm -rf /home/ubuntu/test-deploy/*
